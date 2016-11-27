@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Categories", "Xunit.Categories.csproj", "{690B1C92-FB11-4DED-958B-F3AC80C0B8BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Categories", "src\Xunit.Categories.csproj", "{690B1C92-FB11-4DED-958B-F3AC80C0B8BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Categories.Tests", "Xunit.Categories.Tests\Xunit.Categories.Tests.csproj", "{FA305F57-621F-4A48-8D18-CAD2BF752577}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Categories.Tests", "src\Xunit.Categories.Tests\Xunit.Categories.Tests.csproj", "{FA305F57-621F-4A48-8D18-CAD2BF752577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
