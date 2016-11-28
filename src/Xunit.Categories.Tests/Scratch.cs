@@ -22,9 +22,19 @@ namespace Xunit.Categories.Tests
 
         [Fact]
         [Bug(777)]
+        [Bug("777")]
         public void TestBugWithId()
         {
             throw new NotImplementedException("I've got your number");
+        }
+
+        [Fact, IntegrationTest]
+        [Feature(888)]
+        [Feature("888")]
+
+        public void TestFeatureWithId()
+        {
+            throw new NotImplementedException("I've got your feature");
         }
 
     }

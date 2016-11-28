@@ -4,7 +4,7 @@ using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-    [TraitDiscoverer(BugDiscoverer.FullyQualifiedName, BugDiscoverer.Namespace)]
+    [TraitDiscoverer(BugDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
     public class BugAttribute:Attribute,ITraitAttribute
     {
