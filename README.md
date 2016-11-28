@@ -5,7 +5,7 @@ Friendlier attributes to help categorize your tests.
 The Xunit built in option *Traits* can get a little messy. Its just 2 strings representing a key and value, unless you are familiar with Xunit and the Trait attribute it looks a little magical.
 
 Also both key and value must be specified on the commandline. This means if you decorate your test with 
-[Trait("Category","Bug"] you cannot run only tests from a specific bug  with out adding another trait ([Trait("Bug","8675309"])
+[Trait("Category","Bug")] you cannot run only tests from a specific bug  with out adding another trait ([Trait("Bug","8675309"])
 
 ## Friendly Attributes Included
 - Category 
