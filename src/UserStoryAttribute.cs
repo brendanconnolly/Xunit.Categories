@@ -5,19 +5,19 @@ namespace Xunit.Categories
 {
     [TraitDiscoverer(UserStoryDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-    public class UserStortAttribute:Attribute, ITraitAttribute
+    public class UserStoryAttribute:Attribute, ITraitAttribute
     {
-        public UserStortAttribute()
+        public UserStoryAttribute()
         {
 
         }
 
-        public UserStortAttribute(string name)
+        public UserStoryAttribute(string name)
         {
             this.Identifier = name;
         }
 
-        public UserStortAttribute(long id)
+        public UserStoryAttribute(long id)
         {
             this.Identifier = id.ToString();
         }
