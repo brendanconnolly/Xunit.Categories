@@ -13,8 +13,9 @@ Also both key and value must be specified on the commandline. This means if you 
 - UserStory
 - Bug
 - Integration Test
+- Unit Test
 
-more on the way....
+open an issue or pull request to add more....
 
 
 ## Example
