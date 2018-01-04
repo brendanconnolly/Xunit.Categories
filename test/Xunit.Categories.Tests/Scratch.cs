@@ -37,6 +37,52 @@ namespace Xunit.Categories.Tests
             throw new NotImplementedException("I've got your feature");
         }
 
+	    [Fact]
+		[KnownBug]
+	    public void TestKnownBug()
+	    {
+		    throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+	    }
+
+	    [Fact]
+	    [KnownBug(666)]
+	    [KnownBug("666 a")]
+	    public void TestKnownBugWithId()
+	    {
+		    throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+	    }
+
+	    [Fact]
+	    [Documentation]
+	    [Documentation(666)]
+	    [Documentation("666 a")]
+	    public void TestDocumentation()
+	    {
+		    throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+	    }
+
+	    [Fact]
+	    [Exploratory]
+	    [Exploratory(666)]
+	    [Exploratory("666 a")]
+	    public void TestExploratory()
+	    {
+		    throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+	    }
+
+	    [Fact]
+	    [WorkItem]
+	    [WorkItem(666)]
+	    [WorkItem("666 a")]
+	    public void TestWorkItem()
+	    {
+		    throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+	    }
+
+		
+
+
+
     }
 
 }
