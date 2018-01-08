@@ -4,14 +4,16 @@
     <Authors>Brendan Connolly</Authors>
     <Company>Brendan Connolly</Company>
     <Description>Friendly Traits for Xunit</Description>
-    <Version>2.0.1</Version>
-    <FileVersion>2.0.1</FileVersion>
+    <Version>2.0.2</Version>
+    <FileVersion>2.0.2</FileVersion>
 
-	<TargetFrameworks>netcoreapp1.1;netcoreapp2.0</TargetFrameworks>
+	<TargetFrameworks>netstandard1.1</TargetFrameworks>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
   </ItemGroup>
 
 </Project>

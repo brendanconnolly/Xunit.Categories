@@ -2,7 +2,7 @@
 using Xunit;
 using Xunit.Categories;
 
-namespace Xunit.Categories.Tests
+namespace Xunit.Categories.Test
 {
     public class Scratch
     {

@@ -10,7 +10,7 @@ namespace Xunit.Categories
 
 		public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
 		{
-			var workItemId = traitAttribute.GetNamedArgument<string>("WorkItemIdId");
+			var workItemId = traitAttribute.GetNamedArgument<string>("WorkItemId");
 
 
 			yield return new KeyValuePair<string, string>("Category", "Exploratory");
