@@ -14,6 +14,10 @@ Also both key and value must be specified on the commandline. This means if you 
 - Bug
 - Integration Test
 - Unit Test
+- Exploratory
+- Documentation
+- Known Bug
+- Work Item
 
 open an issue or pull request to add more....
 
