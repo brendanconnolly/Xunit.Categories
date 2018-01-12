@@ -6,12 +6,20 @@
     <Description>Friendly Traits for Xunit</Description>
     <Version>2.0.2</Version>
     <FileVersion>2.0.2</FileVersion>
-
+    <PackageId>xunit.categories</PackageId>
+    <PackageVersion>2.0.2</PackageVersion>
+    <PackageReleaseNotes> Update project to netstandard1.1, include new categories</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageTags>Xunit xunit test category categories trait</PackageTags>
 	<TargetFrameworks>netstandard1.1</TargetFrameworks>
   </PropertyGroup>
+  
   <PropertyGroup>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="xunit" Version="2.3.1" />
   </ItemGroup>
