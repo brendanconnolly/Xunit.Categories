@@ -7,7 +7,7 @@
     <Version>2.0.2</Version>
     <FileVersion>2.0.2</FileVersion>
     <PackageId>xunit.categories</PackageId>
-    <PackageVersion>2.0.2</PackageVersion>
+    <PackageVersion>2.0.2.1</PackageVersion>
     <PackageReleaseNotes> Update project to netstandard1.1, include new categories</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
     <Copyright>Copyright 2018</Copyright>
