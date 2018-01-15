@@ -18,6 +18,7 @@ Also both key and value must be specified on the commandline. This means if you 
 - Documentation
 - Known Bug
 - Work Item
+- System Test
 
 open an issue or pull request to add more....
 
