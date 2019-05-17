@@ -83,5 +83,14 @@ namespace Xunit.Categories.Test
         {
             throw new NotImplementedException("request #8 - This is more black box, high level, and stress testing of a complete running application different to an IntegrationTest");
         }
+
+        [Fact]
+        [WorkItem]
+        [WorkItem(999)]
+        [WorkItem("999")]
+        public void TestTestCase()
+        {
+            throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
     }
 }
