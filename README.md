@@ -48,9 +48,17 @@ You can run all tests marked as Bugs
 
 ``` bat
 xunit.console.exe ... -trait "Category=Bug"
+
+-or via dotnet test
+
+dotnet test --filter "Category=Bug" 
+
 ```
 
 or get more granular
 ``` bat
 xunit.console.exe ... -trait "Bug=777"
+
+-or via dotnet test
+dotnet test --filter "Bug=777" 
 ```
