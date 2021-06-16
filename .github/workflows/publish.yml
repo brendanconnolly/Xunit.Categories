@@ -24,7 +24,7 @@ jobs:
           PROJECT_FILE_PATH: src/Xunit.Categories/Xunit.Categories.csproj
           
           # NuGet package id, used for version detection & defaults to project name
-          # PACKAGE_NAME: Core
+           PACKAGE_NAME: xunit.categories
           
           # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
           # VERSION_FILE_PATH: Directory.Build.props
