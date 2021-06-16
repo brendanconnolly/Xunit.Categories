@@ -14,7 +14,7 @@
      2.0.3 - Adding System Test Attribute
      2.0.2 - Update project to netstandard1.1, include new categories</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
-    <Copyright>Copyright 2019</Copyright>
+    <Copyright>Copyright 2021</Copyright>
     <PackageTags>Xunit xunit test category categories trait</PackageTags>
     <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
