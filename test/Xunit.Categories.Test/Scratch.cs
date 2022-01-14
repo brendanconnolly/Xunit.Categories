@@ -92,5 +92,14 @@ namespace Xunit.Categories.Test
         {
             throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
         }
+
+        [Fact]
+        [LocalTest]
+        [LocalTest(666)]
+        [LocalTest("666 a")]
+        public void TestLocalTest()
+        {
+	        throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
     }
 }
