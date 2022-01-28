@@ -4,17 +4,18 @@
     <Authors>Brendan Connolly</Authors>
     <Company>Brendan Connolly</Company>
     <Description>Friendly Traits for Xunit</Description>
-    <Version>2.0.5</Version>
-    <FileVersion>2.0.5</FileVersion>
+    <Version>2.0.6</Version>
+    <FileVersion>2.0.6</FileVersion>
     <PackageId>xunit.categories</PackageId>
-    <PackageVersion>2.0.5</PackageVersion>
+    <PackageVersion>2.0.6</PackageVersion>
     <PackageReleaseNotes>
+     2.0.6 - Adding LocalTest Attribute
      2.0.5 - update to xunit 2.4.1
      2.0.4 - Support netstandard2
      2.0.3 - Adding System Test Attribute
      2.0.2 - Update project to netstandard1.1, include new categories</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
-    <Copyright>Copyright 2021</Copyright>
+    <Copyright>Copyright 2022</Copyright>
     <PackageTags>Xunit xunit test category categories trait</PackageTags>
     <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
