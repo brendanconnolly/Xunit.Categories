@@ -101,5 +101,19 @@ namespace Xunit.Categories.Test
         {
 	        throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
         }
+
+        [Fact]
+        [Author("Edgar Alan Poe")]
+        public void TestAuthorTest()
+        {
+            throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
+
+        [Fact]
+        [Description("A grim test with plot twists and turns")]
+        public void TestDescriptionTest()
+        {
+            throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
     }
 }
