@@ -20,6 +20,9 @@ Also both key and value must be specified on the command line. This means if you
 - Work Item
 - System Test
 - Test Case
+- Database Test
+- Snapshot Test
+- Expensive
 
 Open an issue or pull request to add more.
 
