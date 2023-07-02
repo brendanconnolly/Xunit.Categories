@@ -20,6 +20,8 @@ Also both key and value must be specified on the command line. This means if you
 - Work Item
 - System Test
 - Test Case
+- Author
+- Description
 
 Open an issue or pull request to add more.
 
