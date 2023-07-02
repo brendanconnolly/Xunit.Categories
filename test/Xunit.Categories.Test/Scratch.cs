@@ -66,6 +66,16 @@ namespace Xunit.Categories.Test
             throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
         }
 
+
+        [Fact]
+        [Specification]
+        [Specification(666)]
+        [Specification("666 a")]
+        public void TestSpecification()
+        {
+            throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
+
         [Fact]
         [WorkItem]
         [WorkItem(666)]
