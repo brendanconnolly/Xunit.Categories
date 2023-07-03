@@ -11,6 +11,27 @@ namespace Xunit.Categories.Test
         }
 
         [Fact]
+        [DatabaseTest]
+        public void TestDatabaseTest()
+        {
+            throw new NotImplementedException("I'm not that important, all the world knows about me, I'll be fixed in 2030");
+        }
+
+        [Fact]
+        [SnapshotTest]
+        public void TestSnapshotTest()
+        {
+            throw new NotImplementedException("I'm a point in time");
+        }
+
+        [Fact]
+        [Expensive]
+        public void TestExpensive()
+        {
+            throw new NotImplementedException("It's going to cost you a small fortune");
+        }
+
+        [Fact]
         [Bug]
         public void TestBug()
         {
