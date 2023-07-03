@@ -261,5 +261,27 @@ namespace Xunit.Categories.Test
                 .And.BeDecoratedWith<LocalTestAttribute>()
                 .Which.Id.Should().Be("666 a");
         }
+
+        [Fact]
+        [Author("Henry David Thoreau")]
+        public void Author()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Author));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<AuthorAttribute>()
+                .Which.AuthorName.Should().Be("Henry David Thoreau");
+        }
+
+        [Fact]
+        [Description("All your base are belong to us")]
+        public void Description()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Description));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<DescriptionAttribute>()
+                .Which.Description.Should().Be("All your base are belong to us");
+        }
     }
 }
