@@ -4,11 +4,12 @@
     <Authors>Brendan Connolly</Authors>
     <Company>Brendan Connolly</Company>
     <Description>Friendly Traits for Xunit</Description>
-    <Version>2.0.7</Version>
-    <FileVersion>2.0.7</FileVersion>
+    <Version>2.0.8</Version>
+    <FileVersion>2.0.8</FileVersion>
     <PackageId>xunit.categories</PackageId>
-    <PackageVersion>2.0.7</PackageVersion>
+    <PackageVersion>2.0.8</PackageVersion>
     <PackageReleaseNotes>
+     2.0.8 - Adding DatabaseTest, SnapshotTest, Expensive  Attributes, xunit.core dependency update
      2.0.7 - Adding Author, Description, Specification Attributes
      2.0.6 - Adding LocalTest Attribute
      2.0.5 - update to xunit 2.4.1
