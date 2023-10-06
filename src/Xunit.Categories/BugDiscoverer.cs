@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
@@ -19,7 +17,6 @@ namespace Xunit.Categories
 
             if (!string.IsNullOrWhiteSpace(bugId))
                 yield return new KeyValuePair<string, string>("Bug", bugId);
-
         }
     }
 }
