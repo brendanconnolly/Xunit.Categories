@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
@@ -13,17 +10,16 @@ namespace Xunit.Categories
     {
         public SystemTestAttribute(string id)
         {
-            this.Id = id;
+            Id = id;
         }
 
         public SystemTestAttribute(long id)
         {
-            this.Id = id.ToString();
+            Id = id.ToString();
         }
 
         public SystemTestAttribute()
         {
-
         }
 
         public string Id { get; private set; }

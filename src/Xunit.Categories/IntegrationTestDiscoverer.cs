@@ -4,7 +4,7 @@ using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-    public class IntegrationTestDiscoverer:ITraitDiscoverer
+    public class IntegrationTestDiscoverer : ITraitDiscoverer
     {
         internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(IntegrationTestDiscoverer);
 

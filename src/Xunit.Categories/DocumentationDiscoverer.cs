@@ -4,20 +4,18 @@ using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-	public class DocumentationDiscoverer : ITraitDiscoverer
-	{
-		internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(DocumentationDiscoverer);
+    public class DocumentationDiscoverer : ITraitDiscoverer
+    {
+        internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(DocumentationDiscoverer);
 
-		public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
-		{
-			var workItemId = traitAttribute.GetNamedArgument<string>("WorkItemId");
+        public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
+        {
+            var workItemId = traitAttribute.GetNamedArgument<string>("WorkItemId");
 
+            yield return new KeyValuePair<string, string>("Category", "Documentation");
 
-			yield return new KeyValuePair<string, string>("Category", "Documentation");
-
-			if (!string.IsNullOrWhiteSpace(workItemId))
-				yield return new KeyValuePair<string, string>("Documentation", workItemId);
-
-		}
-	}
+            if (!string.IsNullOrWhiteSpace(workItemId))
+                yield return new KeyValuePair<string, string>("Documentation", workItemId);
+        }
+    }
 }

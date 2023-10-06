@@ -2,7 +2,6 @@
 {
     public class DiscovererUtil
     {
-        internal const string AssemblyName = nameof(Xunit)+"."+nameof(Xunit.Categories);
-
+        internal const string AssemblyName = nameof(Xunit) + "." + nameof(Xunit.Categories);
     }
 }

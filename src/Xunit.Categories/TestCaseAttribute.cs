@@ -8,22 +8,22 @@ namespace Xunit.Categories
     /// </summary>
     [TraitDiscoverer(TestCaseDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-	public class TestCaseAttribute : Attribute, ITraitAttribute
-	{
+    public class TestCaseAttribute : Attribute, ITraitAttribute
+    {
         public string TestCaseId { get; private set; }
 
         public TestCaseAttribute(string testCaseId)
-		{
-			this.TestCaseId = testCaseId;
-		}
+        {
+            TestCaseId = testCaseId;
+        }
 
-		public TestCaseAttribute(long testCaseId)
-		{
-			this.TestCaseId = testCaseId.ToString();
-		}
+        public TestCaseAttribute(long testCaseId)
+        {
+            TestCaseId = testCaseId.ToString();
+        }
 
-		public TestCaseAttribute()
-		{
-		}
-	}
+        public TestCaseAttribute()
+        {
+        }
+    }
 }
