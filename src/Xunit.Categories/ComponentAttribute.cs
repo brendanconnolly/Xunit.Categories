@@ -17,11 +17,6 @@ namespace Xunit.Categories
             this.ComponentName = name;
         }
 
-        public ComponentAttribute(long id)
-        {
-            this.ComponentName = id.ToString();
-        }
-
         public string ComponentName { get; private set; }
     }
 }
