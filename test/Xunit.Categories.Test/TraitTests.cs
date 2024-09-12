@@ -283,5 +283,16 @@ namespace Xunit.Categories.Test
                 .And.BeDecoratedWith<DescriptionAttribute>()
                 .Which.Description.Should().Be("All your base are belong to us");
         }
+
+        [Fact]
+        [Component("Service X")]
+        public void Component()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Component));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<ComponentAttribute>()
+                .Which.ComponentName.Should().Be("Service X");
+        }
     }
 }
