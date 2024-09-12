@@ -6,11 +6,11 @@ namespace Xunit.Categories
 {
     public class ComponentDiscoverer: ITraitDiscoverer
     {
-        internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(CategoryDiscoverer);
+        internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(ComponentDiscoverer);
 
         public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
         {
-            var name = traitAttribute.GetNamedArgument<string>("Identifier");
+            var name = traitAttribute.GetNamedArgument<string>("ComponentName");
 
             yield return new KeyValuePair<string, string>("Category", "Component");
 
