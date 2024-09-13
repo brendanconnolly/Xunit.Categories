@@ -25,6 +25,7 @@ Also both key and value must be specified on the command line. This means if you
 - Expensive
 - Author
 - Description
+- Component
 
 Open an issue or pull request to add more.
 
