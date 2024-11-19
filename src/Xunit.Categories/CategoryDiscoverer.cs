@@ -4,7 +4,7 @@ using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-    public class CategoryDiscoverer:ITraitDiscoverer
+    public class CategoryDiscoverer : ITraitDiscoverer
     {
         internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(CategoryDiscoverer);
 
@@ -15,7 +15,5 @@ namespace Xunit.Categories
             if (!string.IsNullOrWhiteSpace(categoryName))
                 yield return new KeyValuePair<string, string>("Category", categoryName);
         }
-
-
     }
 }

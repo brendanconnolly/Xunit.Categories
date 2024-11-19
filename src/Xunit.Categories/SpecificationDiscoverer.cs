@@ -4,7 +4,7 @@ using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-    public class SpecificationDiscoverer:ITraitDiscoverer
+    public class SpecificationDiscoverer : ITraitDiscoverer
     {
         internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(SpecificationDiscoverer);
 
