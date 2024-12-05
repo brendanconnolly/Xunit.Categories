@@ -294,5 +294,15 @@ namespace Xunit.Categories.Test
                 .And.BeDecoratedWith<ComponentAttribute>()
                 .Which.ComponentName.Should().Be("Service X");
         }
+        
+        [Fact]
+        [ArchitectureTest]
+        public void ArchitectureTest()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(ArchitectureTest));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<ArchitectureTestAttribute>();
+        }
     }
 }
