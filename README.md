@@ -14,6 +14,7 @@ Also both key and value must be specified on the command line. This means if you
 - Bug
 - Integration Test
 - Unit Test
+- Architecture Test
 - Exploratory
 - Documentation
 - Known Bug
