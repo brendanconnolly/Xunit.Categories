@@ -1,0 +1,26 @@
+using System;
+using Xunit.Sdk;
+
+namespace Xunit.Categories
+{
+    [TraitDiscoverer({{ categoryname }}Discoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class {{ categoryname }}Attribute:Attribute, ITraitAttribute
+    {
+        public {{ categoryname }}Attribute()
+        {
+            
+        }
+        public {{ categoryname }}Attribute(string identifier)
+        {
+            Identifier = identifier;
+        }
+
+        public {{ categoryname }}Attribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
+
+        public string? Identifier { get; }
+    }
+}
