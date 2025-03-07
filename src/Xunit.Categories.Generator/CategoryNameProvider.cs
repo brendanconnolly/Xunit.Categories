@@ -9,8 +9,8 @@ public class CategoryNameProvider
         _categoryNames =
         [
             "Author", "ArchitectureTest", "Bug", "Category", "Component", "DatabaseTest", "Description", "Documentation", "Expensive",
-            "Exploratory", "Feature", "IntegrationTest", "KnownBug", "LocalTest", "SnapshotTest", "Specification", "SystemTest",
-            "TestCase", "UnitTest", "UserStory", "WorkItem"
+            "Exploratory", "Feature", "IntegrationTest", "KnownBug", "LocalTest","Manual", "SnapshotTest", "Specification", "SystemTest",
+            "TestCase","TestOf", "UnitTest", "UserStory", "WorkItem"
         ];
     }
 
