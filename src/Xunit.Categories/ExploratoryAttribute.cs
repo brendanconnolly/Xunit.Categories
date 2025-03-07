@@ -1,31 +1,26 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-	/// <summary>
-	/// For tests that have a exploratory purpose like trying out an unknown API. Not neccessarily relating to your own code.
-	/// </summary>
-	/// <example>trying out LINQ for the first time, writing a piece of code to understand IEnumerable.Take and Skip.</example>
-	[TraitDiscoverer(ExploratoryDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-	public class ExploratoryAttribute:Attribute,ITraitAttribute
-	{
-		public ExploratoryAttribute(string workItemId)
-		{
-			this.WorkItemId = workItemId;
-		}
+    [TraitDiscoverer(ExploratoryDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class ExploratoryAttribute:Attribute, ITraitAttribute
+    {
+        public ExploratoryAttribute()
+        {
+            
+        }
+        public ExploratoryAttribute(string identifier)
+        {
+            Identifier = identifier;
+        }
 
-		public ExploratoryAttribute(long workItemId)
-		{
-			this.WorkItemId = workItemId.ToString();
-		}
+        public ExploratoryAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
 
-		public ExploratoryAttribute()
-		{
-
-		}
-
-		public string WorkItemId { get; private set; }
-	}
+        public string? Identifier { get; }
+    }
 }

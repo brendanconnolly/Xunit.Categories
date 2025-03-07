@@ -1,30 +1,26 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-	/// <summary>
-	/// For annotating tests that relate to a specific work item, not neccessarily a bug.
-	/// </summary>
-	[TraitDiscoverer(WorkItemDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-	public class WorkItemAttribute:Attribute,ITraitAttribute
-	{
-		public WorkItemAttribute(string workItemId)
-		{
-			this.WorkItemId = workItemId;
-		}
+    [TraitDiscoverer(WorkItemDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class WorkItemAttribute:Attribute, ITraitAttribute
+    {
+        public WorkItemAttribute()
+        {
+            
+        }
+        public WorkItemAttribute(string identifier)
+        {
+            Identifier = identifier;
+        }
 
-		public WorkItemAttribute(long workItemId)
-		{
-			this.WorkItemId = workItemId.ToString();
-		}
+        public WorkItemAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
 
-		public WorkItemAttribute()
-		{
-
-		}
-
-		public string WorkItemId { get; private set; }
-	}
+        public string? Identifier { get; }
+    }
 }

@@ -9,14 +9,18 @@ namespace Xunit.Categories
     {
         public ComponentAttribute()
         {
-
+            
         }
-
-        public ComponentAttribute(string name)
+        public ComponentAttribute(string identifier)
         {
-            this.ComponentName = name;
+            Identifier = identifier;
         }
 
-        public string ComponentName { get; private set; }
+        public ComponentAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
+
+        public string? Identifier { get; }
     }
 }

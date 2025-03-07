@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
@@ -8,13 +7,20 @@ namespace Xunit.Categories
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
     public class CategoryAttribute:Attribute, ITraitAttribute
     {
-        public CategoryAttribute(string categoryName)
+        public CategoryAttribute()
         {
-            this.Name = categoryName;
+            
+        }
+        public CategoryAttribute(string identifier)
+        {
+            Identifier = identifier;
         }
 
-        public string Name { get; private set; }
+        public CategoryAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
 
-
+        public string? Identifier { get; }
     }
 }

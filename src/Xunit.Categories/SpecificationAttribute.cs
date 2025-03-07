@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
@@ -9,20 +9,18 @@ namespace Xunit.Categories
     {
         public SpecificationAttribute()
         {
-
+            
         }
-
-        public SpecificationAttribute(string id)
+        public SpecificationAttribute(string identifier)
         {
-            this.Identifier = id;
+            Identifier = identifier;
         }
 
-        public SpecificationAttribute(long id)
+        public SpecificationAttribute(long identifier)
         {
-            this.Identifier = id.ToString();
+            Identifier = identifier.ToString();
         }
 
-        public string Identifier { get; private set; }
-
+        public string? Identifier { get; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
@@ -7,10 +7,13 @@ namespace Xunit.Categories
     public class DatabaseTestDiscoverer:ITraitDiscoverer
     {
         internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(DatabaseTestDiscoverer);
-
+    
         public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
         {
-            yield return new KeyValuePair<string, string>("Category", "DatabaseTest");
+            var identifier = traitAttribute.GetNamedArgument<string>("Identifier");
+    
+            if (!string.IsNullOrWhiteSpace(identifier))
+                yield return new KeyValuePair<string, string>("DatabaseTest", identifier);
         }
     }
 }

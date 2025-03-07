@@ -1,0 +1,49 @@
+using FluentAssertions;
+using Xunit;
+using Xunit.Categories;
+
+namespace Xunit.Categories.Test
+{
+    public class {{ categoryname }}TraitTests
+    {
+        [Fact]
+        public void FactTest()
+        {
+            var testMethod = typeof({{ categoryname }}TraitTests).GetMethod(nameof(FactTest));
+            testMethod.Should().BeDecoratedWith<FactAttribute>();
+        }
+        
+        [Fact]
+        [{{ categoryname }}]
+        public void {{ categoryname }}Test()
+        {
+            var testMethod = typeof({{ categoryname }}TraitTests).GetMethod(nameof({{ categoryname }}Test));
+            testMethod.Should()
+            .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<{{ categoryname }}Attribute>();
+        }
+
+        [Fact]
+        [{{ categoryname }}("888")]
+        public void {{ categoryname }}WithIdentifierAsString()
+        {
+            var testMethod = typeof({{ categoryname }}TraitTests).GetMethod(nameof( {{ categoryname }}WithIdentifierAsString));
+            testMethod.Should()
+            .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<{{ categoryname }}Attribute>()
+                .Which.Identifier.Should().Be("888");
+        }
+
+        [Fact]
+        [{{ categoryname }}(888)]
+        public void {{ categoryname }}WithIdentifierAsInteger()
+        {
+            var testMethod = typeof({{ categoryname }}TraitTests).GetMethod(nameof( {{ categoryname }}WithIdentifierAsInteger));
+            testMethod.Should()
+            .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<{{ categoryname }}Attribute>()
+                    .Which.Identifier.Should().Be("888");
+        }
+                    
+    }
+}

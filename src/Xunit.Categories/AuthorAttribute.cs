@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
@@ -7,11 +7,20 @@ namespace Xunit.Categories
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
     public class AuthorAttribute:Attribute, ITraitAttribute
     {
-        public AuthorAttribute(string authorName)
+        public AuthorAttribute()
         {
-            AuthorName = authorName;
+            
+        }
+        public AuthorAttribute(string identifier)
+        {
+            Identifier = identifier;
         }
 
-        public string AuthorName { get; }
+        public AuthorAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
+
+        public string? Identifier { get; }
     }
 }

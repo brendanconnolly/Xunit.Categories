@@ -9,20 +9,18 @@ namespace Xunit.Categories
     {
         public UnitTestAttribute()
         {
-
+            
         }
-
-        public UnitTestAttribute(string name)
+        public UnitTestAttribute(string identifier)
         {
-            this.Identifier = name;
+            Identifier = identifier;
         }
 
-        public UnitTestAttribute(long id)
+        public UnitTestAttribute(long identifier)
         {
-            this.Identifier = id.ToString();
+            Identifier = identifier.ToString();
         }
 
-        public string Identifier { get; private set; }
-
+        public string? Identifier { get; }
     }
 }

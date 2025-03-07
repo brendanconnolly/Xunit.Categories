@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
@@ -7,6 +7,20 @@ namespace Xunit.Categories
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
     public class SnapshotTestAttribute:Attribute, ITraitAttribute
     {
+        public SnapshotTestAttribute()
+        {
+            
+        }
+        public SnapshotTestAttribute(string identifier)
+        {
+            Identifier = identifier;
+        }
 
+        public SnapshotTestAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
+
+        public string? Identifier { get; }
     }
 }

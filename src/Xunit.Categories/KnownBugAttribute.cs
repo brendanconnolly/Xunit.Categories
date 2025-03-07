@@ -1,30 +1,26 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-	/// <summary>
-	/// For failing tests relating to known bugs that should not fail a build
-	/// </summary>
-	[TraitDiscoverer(KnownBugDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-	public class KnownBugAttribute:Attribute,ITraitAttribute
-	{
-		public KnownBugAttribute(string id)
-		{
-			this.Id = id;
-		}
+    [TraitDiscoverer(KnownBugDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class KnownBugAttribute:Attribute, ITraitAttribute
+    {
+        public KnownBugAttribute()
+        {
+            
+        }
+        public KnownBugAttribute(string identifier)
+        {
+            Identifier = identifier;
+        }
 
-		public KnownBugAttribute(long id)
-		{
-			this.Id = id.ToString();
-		}
+        public KnownBugAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
 
-		public KnownBugAttribute()
-		{
-
-		}
-
-		public string Id { get; private set; }
-	}
+        public string? Identifier { get; }
+    }
 }

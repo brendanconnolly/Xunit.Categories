@@ -1,29 +1,26 @@
-﻿using System;
+using System;
 using Xunit.Sdk;
 
 namespace Xunit.Categories
 {
-    /// <summary>
-    /// For annotating tests that relate to a specific Test Case
-    /// </summary>
     [TraitDiscoverer(TestCaseDiscoverer.DiscovererTypeName, DiscovererUtil.AssemblyName)]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-	public class TestCaseAttribute : Attribute, ITraitAttribute
-	{
-        public string TestCaseId { get; private set; }
+    public class TestCaseAttribute:Attribute, ITraitAttribute
+    {
+        public TestCaseAttribute()
+        {
+            
+        }
+        public TestCaseAttribute(string identifier)
+        {
+            Identifier = identifier;
+        }
 
-        public TestCaseAttribute(string testCaseId)
-		{
-			this.TestCaseId = testCaseId;
-		}
+        public TestCaseAttribute(long identifier)
+        {
+            Identifier = identifier.ToString();
+        }
 
-		public TestCaseAttribute(long testCaseId)
-		{
-			this.TestCaseId = testCaseId.ToString();
-		}
-
-		public TestCaseAttribute()
-		{
-		}
-	}
+        public string? Identifier { get; }
+    }
 }
