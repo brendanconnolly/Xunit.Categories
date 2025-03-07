@@ -26,8 +26,12 @@ Also both key and value must be specified on the command line. This means if you
 - Author
 - Description
 - Component
+- TestOf
+- Manual
 
-Open an issue or pull request to add more.
+Open an issue or pull request to add more, adding a category is as easy as adding it to a array :) 
+
+[example change](https://github.com/brendanconnolly/Xunit.Categories/pull/38/commits/2d2292c777a7b11c684c81e2642e06207cdfdb41)
 
 
 ## Example
