@@ -10,6 +10,7 @@
     <PackageVersion>3.0.0</PackageVersion>
     <PackageReleaseNotes>
      3.0.0 - migrating to templated code generation 
+     - adds TestOf, Manual categories
     </PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
     <Copyright>Copyright 2025</Copyright>
