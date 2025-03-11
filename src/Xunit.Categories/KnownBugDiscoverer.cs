@@ -12,6 +12,8 @@ namespace Xunit.Categories
         {
             var identifier = traitAttribute.GetNamedArgument<string>("Identifier");
     
+            yield return new KeyValuePair<string, string>("Category", "KnownBug");
+    
             if (!string.IsNullOrWhiteSpace(identifier))
                 yield return new KeyValuePair<string, string>("KnownBug", identifier);
         }

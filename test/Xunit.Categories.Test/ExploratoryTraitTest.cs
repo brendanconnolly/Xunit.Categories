@@ -4,6 +4,31 @@ using Xunit.Categories;
 
 namespace Xunit.Categories.Test
 {
+    public class ExploratoryDiscoverTests
+        {
+        [Fact]
+        public void WhenNoIdentifierSpecifiedShouldAddCategoryTrait()
+        {
+            var discoverer = new ExploratoryDiscoverer();
+            var traits = discoverer.GetTraits( new MockAttributeInfo());
+            traits.Should().HaveCount(1)
+            .And.ContainKey("Category")
+            .And.ContainValue("Exploratory");
+        }
+        
+        [Fact]
+        public void WhenIdentifierSpecifiedShouldAddCategoryAndExploratoryTrait()
+        {
+            var discoverer = new ExploratoryDiscoverer();
+            var traits = discoverer.GetTraits( new MockAttributeInfo("888"));
+            traits.Should().HaveCount(2)
+            .And.ContainKey("Category")
+            .And.ContainValue("Exploratory")
+            .And.ContainKey("Exploratory")
+            .And.ContainValue("888");
+        }
+    }
+
     public class ExploratoryTraitTests
     {
         [Fact]

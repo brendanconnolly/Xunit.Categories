@@ -12,6 +12,8 @@ namespace Xunit.Categories
         {
             var identifier = traitAttribute.GetNamedArgument<string>("Identifier");
     
+            yield return new KeyValuePair<string, string>("Category", "WorkItem");
+    
             if (!string.IsNullOrWhiteSpace(identifier))
                 yield return new KeyValuePair<string, string>("WorkItem", identifier);
         }

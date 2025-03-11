@@ -1,18 +1,19 @@
 using FluentAssertions;
+using Xunit;
+using Xunit.Categories;
 
 namespace Xunit.Categories.Test
 {
-
     public class SystemTestDiscoverTests
-    {
+        {
         [Fact]
         public void WhenNoIdentifierSpecifiedShouldAddCategoryTrait()
         {
             var discoverer = new SystemTestDiscoverer();
             var traits = discoverer.GetTraits( new MockAttributeInfo());
             traits.Should().HaveCount(1)
-                .And.ContainKey("Category")
-                .And.ContainValue("SystemTest");
+            .And.ContainKey("Category")
+            .And.ContainValue("SystemTest");
         }
         
         [Fact]
@@ -21,12 +22,13 @@ namespace Xunit.Categories.Test
             var discoverer = new SystemTestDiscoverer();
             var traits = discoverer.GetTraits( new MockAttributeInfo("888"));
             traits.Should().HaveCount(2)
-                .And.ContainKey("Category")
-                .And.ContainValue("SystemTest")
-                .And.ContainKey("SystemTest")
-                .And.ContainValue("888");
+            .And.ContainKey("Category")
+            .And.ContainValue("SystemTest")
+            .And.ContainKey("SystemTest")
+            .And.ContainValue("888");
         }
     }
+
     public class SystemTestTraitTests
     {
         [Fact]
