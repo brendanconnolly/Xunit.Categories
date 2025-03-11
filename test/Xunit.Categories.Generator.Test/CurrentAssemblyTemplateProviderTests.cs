@@ -50,6 +50,8 @@ public class CurrentAssemblyTemplateProviderTests
                     {
                         var identifier = traitAttribute.GetNamedArgument<string>("Identifier");
                 
+                        yield return new KeyValuePair<string, string>("Category", "{{ categoryname }}");
+                
                         if (!string.IsNullOrWhiteSpace(identifier))
                             yield return new KeyValuePair<string, string>("{{ categoryname }}", identifier);
                     }
@@ -64,6 +66,31 @@ public class CurrentAssemblyTemplateProviderTests
            
            namespace Xunit.Categories.Test
            {
+               public class {{ categoryname }}DiscoverTests
+                   {
+                   [Fact]
+                   public void WhenNoIdentifierSpecifiedShouldAddCategoryTrait()
+                   {
+                       var discoverer = new {{ categoryname }}Discoverer();
+                       var traits = discoverer.GetTraits( new MockAttributeInfo());
+                       traits.Should().HaveCount(1)
+                       .And.ContainKey("Category")
+                       .And.ContainValue("{{ categoryname }}");
+                   }
+                   
+                   [Fact]
+                   public void WhenIdentifierSpecifiedShouldAddCategoryAnd{{ categoryname }}Trait()
+                   {
+                       var discoverer = new {{ categoryname }}Discoverer();
+                       var traits = discoverer.GetTraits( new MockAttributeInfo("888"));
+                       traits.Should().HaveCount(2)
+                       .And.ContainKey("Category")
+                       .And.ContainValue("{{ categoryname }}")
+                       .And.ContainKey("{{ categoryname }}")
+                       .And.ContainValue("888");
+                   }
+               }
+           
                public class {{ categoryname }}TraitTests
                {
                    [Fact]
