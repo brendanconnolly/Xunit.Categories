@@ -8,26 +8,27 @@ Also both key and value must be specified on the command line. This means if you
 `[Trait("Category","Bug")]` you cannot run only tests from a specific bug  without adding another trait `([Trait("Bug","8675309"])`
 
 ## Friendly Attributes Included
-- Category 
-- Feature
-- User Story
-- Bug
-- Integration Test
-- Unit Test
-- Exploratory
-- Documentation
-- Known Bug
-- Work Item
-- System Test
-- Test Case
-- Database Test
-- Snapshot Test
-- Expensive
 - Author
-- Description
+- Bug
+- Category 
 - Component
-- TestOf
+- DatabaseTest
+- Description
+- Documentation
+- Expensive
+- Exploratory
+- Feature
+- IntegrationTest
+- Known Bug
+- LongRunning
 - Manual
+- SnapshotTest
+- SystemTest
+- TestCase
+- TestOf
+- UnitTest
+- UserStory
+- WorkItem
 
 Open an issue or pull request to add more, adding a category is as easy as adding it to a array :) 
 

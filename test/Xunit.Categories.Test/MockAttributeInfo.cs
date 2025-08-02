@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace Xunit.Categories.Test
 {
-    public class MockAttributeInfo: IAttributeInfo
+    public class MockAttributeInfo : LongLivedMarshalByRefObject, IAttributeInfo
     {
         private readonly string _identifier;
 

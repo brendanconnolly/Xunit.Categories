@@ -4,14 +4,15 @@
     <Authors>Brendan Connolly</Authors>
     <Company>Brendan Connolly</Company>
     <Description>Friendly Traits for Xunit</Description>
-    <Version>3.0.1</Version>
-    <FileVersion>3.0.1</FileVersion>
+    <Version>3.0.2</Version>
+    <FileVersion>3.0.2</FileVersion>
     <PackageId>xunit.categories</PackageId>
-    <PackageVersion>3.0.1</PackageVersion>
+    <PackageVersion>3.0.2</PackageVersion>
     <PackageReleaseNotes>
-     3.0.1 - fix issue discovering tests with parametreless category attributes 
-     3.0.0 - migrating to templated code generation 
-     - adds TestOf, Manual categories
+        3.0.2 - add LongRunning category, update nuget dependencies, enhance MockAttributeInfo for cross-domain use
+        3.0.1 - fix issue discovering tests with parametreless category attributes
+        3.0.0 - migrating to templated code generation
+        - adds TestOf, Manual categories
     </PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
     <Copyright>Copyright 2025</Copyright>
@@ -27,7 +28,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.core" Version="2.9.3" />
   </ItemGroup>
 
 </Project>
