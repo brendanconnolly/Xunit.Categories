@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using Xunit.v3;
+
+namespace Xunit.Categories.V3
+{
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class {{ categoryname }}Attribute : Attribute, ITraitAttribute
+    {
+        public {{ categoryname }}Attribute()
+        {            
+        }
+
+        public {{ categoryname }}Attribute(long identifier) : this(identifier.ToString())
+        {
+        }
+
+        public {{ categoryname }}Attribute(string identifier)
+        {
+            Identifier = identifier;
+        }
+
+        public string? Identifier { get; }
+
+        public IReadOnlyCollection<KeyValuePair<string, string>> GetTraits()
+        {
+            List<KeyValuePair<string, string>> traits = new()
+            {
+                new KeyValuePair<string, string>("Category", "{{ categoryname }}")
+            };
+
+            if (!string.IsNullOrWhiteSpace(Identifier))
+                traits.Add(new KeyValuePair<string, string>("{{ categoryname }}", Identifier!));
+
+            return traits;
+        }
+    }
+}

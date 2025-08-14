@@ -1,33 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Authors>Brendan Connolly</Authors>
-    <Company>Brendan Connolly</Company>
-    <Description>Friendly Traits for Xunit</Description>
-    <Version>3.0.1</Version>
-    <FileVersion>3.0.1</FileVersion>
+    <Description>Friendly Traits for xUnit.net 2.x</Description>
+    <Version>4.0.0</Version>
+    <FileVersion>4.0.0</FileVersion>
     <PackageId>xunit.categories</PackageId>
-    <PackageVersion>3.0.1</PackageVersion>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageVersion>4.0.0</PackageVersion>
     <PackageReleaseNotes>
-     3.0.1 - fix issue discovering tests with parametreless category attributes 
-     3.0.0 - migrating to templated code generation 
-     - adds TestOf, Manual categories
+      - Refactor to an Incremental Roslyn Source Generator
     </PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
-    <Copyright>Copyright 2025</Copyright>
     <PackageTags>Xunit xunit test category categories trait</PackageTags>
-    <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>9</LangVersion>
     <Nullable>enable</Nullable>
+    <IsTestProject>false</IsTestProject>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
-  
+
   <ItemGroup>
-    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.core" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xunit.Categories.SourceGenerators\Xunit.Categories.SourceGenerators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Xunit.Categories.txt" />
   </ItemGroup>
 
 </Project>

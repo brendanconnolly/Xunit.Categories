@@ -7,9 +7,6 @@ on:
       - '**.cs'
       - '**.csproj'
 
-env:
-  DOTNET_VERSION: '9.0.200' # The .NET SDK version to use
-
 jobs:
   build-generate-test:
 
@@ -21,30 +18,22 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          dotnet-version: '9.x'
 
       - name: Install dependencies
         run: dotnet restore
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        
-      - name: Generator Tests
-        working-directory: test/Xunit.Categories.Generator.Test/
-        run: dotnet test 
 
-      - name: Generate and move
-        working-directory: src/Xunit.Categories.Generator
-        run: |
-          dotnet run
-          pwd
-          cp -a ./output/Xunit.Categories/. ../Xunit.Categories/
-          cp -a ./output/Xunit.Categories.Test/. ../../test/Xunit.Categories.Test/
-          rm -r ./output
-      
       - name: Category Tests
         working-directory: ./test/Xunit.Categories.Test/
-        run: dotnet test --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --logger trx;LogFileName=test-results.trx 
+        run: dotnet test --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --logger trx;LogFileName=test-results.trx
+
+      - name: Category V3 Tests
+        working-directory: ./test/Xunit.Categories.V3.Test/
+        run: dotnet test --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --logger trx;LogFileName=test-results.trx
+
       - name: Combine Coverage Reports # This is because one report is produced per project, and we want one result for all of them.
         uses: danielpalme/ReportGenerator-GitHub-Action@v5.4.3
         with:
@@ -56,12 +45,14 @@ jobs:
           tag: "${{ github.run_number }}_${{ github.run_id }}" # Optional tag or build version.
           customSettings: "" # Optional custom settings (separated by semicolon). See: https://github.com/danielpalme/ReportGenerator/wiki/Settings.
           toolpath: "reportgeneratortool" # Default directory for installing the dotnet tool.
+
       - name: Upload Combined Coverage XML
         uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: ${{ github.workspace }}/Cobertura.xml
           retention-days: 5
+
       - name: Publish Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
@@ -94,12 +85,3 @@ jobs:
         with:
           # NOTE: using trx_files instead of files due to https://github.com/EnricoMi/publish-unit-test-result-action/issues/424
           trx_files: "${{ github.workspace }}/**/*.trx"
-
-      - name: Commit Generated Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: adding generated files
-          file_pattern: '*.cs'
-
-      - name: chilli p
-        run: find .

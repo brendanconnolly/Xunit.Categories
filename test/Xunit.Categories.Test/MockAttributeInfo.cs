@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace Xunit.Categories.Test
 {
-    public class MockAttributeInfo: IAttributeInfo
+    public class MockAttributeInfo : LongLivedMarshalByRefObject, IAttributeInfo
     {
         private readonly string _identifier;
 
@@ -20,7 +20,7 @@ namespace Xunit.Categories.Test
 
         public IEnumerable<object> GetConstructorArguments()
         {
-            return new object[]{"test"};
+            return new object[] { "test" };
         }
 
         public IEnumerable<IAttributeInfo> GetCustomAttributes(string assemblyQualifiedAttributeTypeName)
@@ -30,7 +30,7 @@ namespace Xunit.Categories.Test
 
         public TValue GetNamedArgument<TValue>(string argumentName)
         {
-            return (TValue) Convert.ChangeType(_identifier, typeof(TValue));
+            return (TValue)Convert.ChangeType(_identifier, typeof(TValue));
         }
     }
 }

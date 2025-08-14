@@ -1,38 +1,44 @@
 # Xunit.Categories
+
+xUnit 2.x: [![xunit.categories NuGet Version](https://img.shields.io/nuget/v/xunit.categories)](https://www.nuget.org/packages/xunit.categories "Download xunit.categories from NuGet")
+
+xUnit 3.x: [![xunit.categories.v3 NuGet Version](https://img.shields.io/nuget/v/xunit.categories.v3)](https://www.nuget.org/packages/xunit.categories.v3 "Download xunit.categories.v3 from NuGet")
+
 Friendlier attributes to help categorize your tests. 
 
 ## Messy Traits?
+
 The xUnit built in option *Traits* can get a little messy. Its just 2 strings representing a key and value, unless you are familiar with xUnit and the Trait attribute it looks a little magical.
 
-Also both key and value must be specified on the command line. This means if you decorate your test with 
-`[Trait("Category","Bug")]` you cannot run only tests from a specific bug  without adding another trait `([Trait("Bug","8675309"])`
+Also both key and value must be specified on the command line. This means if you decorate your test with `[Trait("Category","Bug")]` you cannot run only tests from a specific bug  without adding another trait `([Trait("Bug","8675309"])`
 
 ## Friendly Attributes Included
-- Category 
-- Feature
-- User Story
-- Bug
-- Integration Test
-- Unit Test
-- Exploratory
-- Documentation
-- Known Bug
-- Work Item
-- System Test
-- Test Case
-- Database Test
-- Snapshot Test
-- Expensive
+
+- ArchitectureTest
 - Author
-- Description
+- Bug
+- Category
 - Component
-- TestOf
+- DatabaseTest
+- Description
+- Documentation
+- Expensive
+- Exploratory
+- Feature
+- IntegrationTest
+- KnownBug
+- LocalTest
 - Manual
+- SnapshotTest
+- Specification
+- SystemTest
+- TestCase
+- TestOf
+- UnitTest
+- UserStory
+- WorkItem
 
-Open an issue or pull request to add more, adding a category is as easy as adding it to a array :) 
-
-[example change](https://github.com/brendanconnolly/Xunit.Categories/pull/38/commits/2d2292c777a7b11c684c81e2642e06207cdfdb41)
-
+Open an issue or pull request to add more, adding a category is as easy as adding it to [Xunit.Categories.txt](src/Xunit.Categories/Xunit.Categories.txt).
 
 ## Example
 
