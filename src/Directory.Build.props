@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>    
+    <Authors>Brendan Connolly</Authors>
+    <Company>Brendan Connolly</Company>
+    <PackageProjectUrl>https://github.com/brendanconnolly/Xunit.Categories</PackageProjectUrl>
+    <Copyright>Copyright 2025</Copyright>
+  </PropertyGroup>
+
+</Project>

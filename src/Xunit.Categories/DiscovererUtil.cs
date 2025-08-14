@@ -1,8 +1,7 @@
 ﻿namespace Xunit.Categories
 {
-    public class DiscovererUtil
+    public static class DiscovererUtil
     {
-        internal const string AssemblyName = nameof(Xunit)+"."+nameof(Xunit.Categories);
-
+        public const string AssemblyName = nameof(Xunit) + "." + nameof(Categories);
     }
 }
